@@ -1,4 +1,5 @@
 import Solutions.Day1;
+import Solutions.Day2;
 import Solutions.SolutionBuilder;
 
 import java.util.Scanner;
@@ -9,6 +10,7 @@ void main() {
 
     try {
         SolutionBuilder.registerSolution("day1", new Day1());
+        SolutionBuilder.registerSolution("day2", new Day2());
     } catch (Exception e) {
         System.err.println("Error: " + e.getMessage());
     }
