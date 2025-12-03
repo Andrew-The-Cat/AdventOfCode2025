@@ -11,6 +11,7 @@ void main() {
     try {
         SolutionBuilder.registerSolution("day1", new Day1());
         SolutionBuilder.registerSolution("day2", new Day2());
+        SolutionBuilder.registerSolution("day3", new Solutions.Day3());
     } catch (Exception e) {
         System.err.println("Error: " + e.getMessage());
     }
