@@ -47,7 +47,7 @@ public class Day4 extends Solution {
         var count = 0;
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.getFirst().size(); j++) {
-                System.out.print(STR."Progress: \{(float) (i * j) / (float) (list.size() * list.getFirst().size()) * 100}%\r");
+                System.out.print("Progress: " +(float) (i * j) / (float) (list.size() * list.getFirst().size()) * 100 + "\r");
                 if (list.get(i).get(j) != '@')
                     continue;
                 if (countNeighbors(list, i, j, '@') < 4) {

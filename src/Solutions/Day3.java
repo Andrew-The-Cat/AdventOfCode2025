@@ -26,6 +26,8 @@ public class Day3 extends  Solution {
 
             for (int i = 1; i < length - maxBatteries + 1; i++) {
                 for (int j = 0; j < maxBatteries; j++) {
+                    System.out.print("Progress: " + (float)(i * j) / (float)(length * maxBatteries) * 100 + "%\r");
+
                     if (line.charAt(i + j) > batteryJolts[j]) {
                         propagate(batteryJolts, line.charAt(i + j), j);
                     }
@@ -43,7 +45,7 @@ public class Day3 extends  Solution {
             var str = Arrays.stream(batteryJolts).map(Object::toString).collect(Collectors.joining(""));
 
             //System.out.println(STR."Highest joltage: \{str}");
-            sum += Long.parseLong(STR."\{str}");
+            sum += Long.parseLong(str);
         }
 
         System.out.println("Total sum of jolts: " + sum);
