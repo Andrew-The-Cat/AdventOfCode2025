@@ -1,6 +1,4 @@
-import Solutions.Day1;
-import Solutions.Day2;
-import Solutions.SolutionBuilder;
+import Solutions.*;
 
 import java.util.Scanner;
 
@@ -11,7 +9,8 @@ void main() {
     try {
         SolutionBuilder.registerSolution("day1", new Day1());
         SolutionBuilder.registerSolution("day2", new Day2());
-        SolutionBuilder.registerSolution("day3", new Solutions.Day3());
+        SolutionBuilder.registerSolution("day3", new Day3());
+        SolutionBuilder.registerSolution("day4", new Day4());
     } catch (Exception e) {
         System.err.println("Error: " + e.getMessage());
     }
