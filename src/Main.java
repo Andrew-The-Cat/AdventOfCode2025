@@ -12,6 +12,7 @@ class Main {
             SolutionBuilder.registerSolution("day2", new Day2());
             SolutionBuilder.registerSolution("day3", new Day3());
             SolutionBuilder.registerSolution("day4", new Day4());
+            SolutionBuilder.registerSolution("day5", new Day5());
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
         }
@@ -39,12 +40,16 @@ class Main {
 
                 boolean running = true;
                 while (true) {
-                    System.out.println("\nAwaiting input data (end with an empty line or type 'exit' to return to day selection):");
+                    System.out.println("\nAwaiting input data (end with 'end' or type 'exit' to return to day selection):");
                     StringBuilder inputDataBuilder = new StringBuilder();
                     String line;
-                    while (!(line = input.nextLine()).isEmpty()) {
+                    while (true) {
+                        line = input.nextLine();
                         if (line.equalsIgnoreCase("exit")) {
                             running = false;
+                            break;
+                        }
+                        if (line.equalsIgnoreCase("end")) {
                             break;
                         }
                         inputDataBuilder.append(line).append("\n");
