@@ -42,7 +42,7 @@ public class Day2 extends Solution {
                     long finalJ = j;
                     long reconstructed = Long.parseLong(
                             IntStream.range(0, i)
-                                    .mapToObj(_ -> Long.toString(finalJ))
+                                    .mapToObj(x -> Long.toString(finalJ))
                                     .collect(Collectors.joining())
                     );
                     if (reconstructed > inArr[1]) break;
