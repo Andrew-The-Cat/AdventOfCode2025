@@ -15,6 +15,7 @@ class Main {
             SolutionBuilder.registerSolution("day5", new Day5());
             SolutionBuilder.registerSolution("day6", new Day6());
             SolutionBuilder.registerSolution("day7", new Day7());
+            SolutionBuilder.registerSolution("day8", new Day8());
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
         }
